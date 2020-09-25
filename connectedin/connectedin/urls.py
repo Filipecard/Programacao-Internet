@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Perfil import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.index),
+    path('/perfil/<int:id>',views.exibir_perfil, name='exibir'),
+    path('perfis/<int:id>/convidar',views.convidar,name='convidar'),
 ]

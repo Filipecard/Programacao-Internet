@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ConnectedIn </title>
+</head>
+<body>
+    <h1> Index </h1>
+    {% if perfis %}
+        <ul>
+            {% for perfil in perfis  %}
+            <li> 
+                <a href="{% url 'exibir' perfil.id %}"> {{perfil.nome}} </a> / {{perfil.email}}
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum perfil encontrado </p>
+    {% endif %}
+</body>
+</html>
