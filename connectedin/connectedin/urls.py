@@ -20,6 +20,7 @@ from Perfil import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
-    path('/perfil/<int:id>',views.exibir_perfil, name='exibir'),
-    path('perfis/<int:id>/convidar',views.convidar,name='convidar'),
+    path('perfil/<int:id>',views.exibir_perfil, name='exibir'),
+    path('perfil/<int:id>/convidar',views.convidar,name='convidar'),
+    path('convite/<int:convite_id>/aceitar',views.aceitar,name='aceitar'),
 ]
